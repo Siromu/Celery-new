@@ -1,0 +1,21 @@
+{% extends 'flatpages/default.html' %}
+<!DOCTYPE html>
+<html lang="en">
+{% block title %}
+    <title>Make subscribe</title>
+{% endblock title %}
+{% block content %}
+    <h1>Make subscribe</h1>
+
+    <hr>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <h4> {{ form.as_p }} </h4>
+
+
+         <br>
+        <input type="submit" value="Подписаться">
+    </form>
+{% endblock content %}

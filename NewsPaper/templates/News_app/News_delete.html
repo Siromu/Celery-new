@@ -1,0 +1,18 @@
+{% extends 'flatpages/default.html' %}
+
+{% load filters %}
+
+{% block title %} News {% endblock title %}
+ 
+{% block content %}
+<h2>Вы действительно хотите удалить данную статью?</h2>
+
+
+<h2><small> {{ News_delete.title }}</small></h2>
+<p> {{ News_delete.text|truncatechars:50|block_words }} </p>
+
+ 
+<form method="POST">
+    {% csrf_token %}
+    <input type="submit" value="подтвердить"></form>
+{% endblock content %} 

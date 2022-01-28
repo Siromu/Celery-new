@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>{{ user }}, в Вашем любимом разделе вышли новые статьи!</h2>
+
+   <h2><small> post_list = Post.objects.filter(datetime__range=[datetime.now() - timedelta(days=7), datetime.now()]) </small></h2>
+    <a href='http://127.0.0.1:8000/news/{{ post.pk }}'>Посмотреть статью</a>
+
+</body>
+</html>

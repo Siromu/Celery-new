@@ -1,0 +1,36 @@
+{% extends 'flatpages/default.html' %}
+ 
+{% block title %} News {% endblock title %}
+ 
+{% block content %}
+<table>
+    <thead>
+        <th>
+           Author
+        </th>
+        <th>
+            Category
+        </th>
+        <th>
+            Title
+        </th>
+        <th>
+            Text
+        </th>
+    </thead>
+    <tr>
+        <td>
+            {{ post.Author|title }}
+        </td>
+        <td>
+            {{ post.category.name|title }}
+        </td>
+        <td>
+            {{ post.title }}
+        </td>
+        <td>
+            {{ post.text }}
+        </td>
+    </tr>
+</table>
+{% endblock content %}

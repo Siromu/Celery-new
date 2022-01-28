@@ -1,0 +1,15 @@
+<!--  наследуемся от шаблона default.html, который мы создавали ещё во времена flatpages -->
+{% extends 'flatpages/default.html' %}
+
+
+{% block title %}
+News
+{% endblock title %}
+
+<!-- В контенте на странице мы выводим сам товар, ID которого было передано в адрес -->
+{% block content %}
+<h1>Новость</h1>
+<hr>
+<h2><small> {{ NewsId.title}}, {{NewsId.dateCreation}} </small></h2>
+<p> {{ NewsId.text}} </p>
+{% endblock content %}

@@ -1,0 +1,14 @@
+{% extends 'flatpages/default.html' %}
+
+
+{% block title %}
+News
+{% endblock title %}
+
+<!-- В контенте на странице мы выводим сам товар, ID которого было передано в адрес -->
+{% block content %}
+{% for Post in News %}
+<h1>Новость</h1>
+   <p> {{ NewsId}} </p>
+{% endfor %}
+{% endblock content %}
